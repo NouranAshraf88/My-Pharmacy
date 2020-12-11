@@ -18,8 +18,8 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- topbar -->
-       <div class="top-bar">
+<!-- topbar -->
+       <div class="top-bar ">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
@@ -34,44 +34,9 @@
             </div>
         </div>
 
-        <!-- navbar -->
-                    <div class="nav">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
-                    <a href="#" class="navbar-brand">MENU</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-between sticky-top" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-                                <div class="dropdown-menu">
-                                    <a href="wishlist.html" class="dropdown-item">Wishlist</a>
-                                    <a href="log in.html" class="dropdown-item">Login</a>
-                                    <a href="register.html" class="dropdown-item">Register</a>
-
-                                    <a href="#social-links" class="dropdown-item">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="navbar-nav ml-auto">
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-                                <div class="dropdown-menu">
-                                    <a href="log%20in.html" class="dropdown-item">Login</a>
-                                    <a href="register.html" class="dropdown-item">Register</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        
         <!-- search-->
-            <div class="bottom-bar">
+            <div class="bottom-bar sticky-top">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-3">
@@ -103,6 +68,47 @@
             </div>
         </div>
 
+		<!-- navbar -->
+                    <div class="nav sticky-tops">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
+                    <a href="#" class="navbar-brand  sticky-top">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
+                        <div class="navbar-nav mr-auto  sticky-top">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="#products" class="nav-item nav-link">Products</a>
+                            <a href="#recent-products" class="nav-item nav-link">Checkout</a>
+							<a href="#" class="nav-item nav-link">Cart</a>
+
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Wishlist</a>
+                                    <a href="register.html" class="dropdown-item">Register</a>
+                                    <a href="log%20in.html" class="dropdown-item">Log in</a>
+                                    <a href="#social-links" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="log%20in.html" class="dropdown-item">Login</a>
+                                    <a href="register.html" class="dropdown-item">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+   
+
 
 
         <!-- Breadcrumb Start -->
@@ -118,56 +124,51 @@
         <!-- Breadcrumb End -->
         
         <!-- Login Start -->
-   
-<div class="container">
-        <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-        	<div class="panel panel-default">
-        		<div class="panel-heading">
-			    		<h3 class="panel-title">Register <small>It's free!</small></h3>
-			 			</div>
-			 			<div class="panel-body">
-			    		<form role="form">
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
-			    					</div>
-			    				</div>
-			    			</div>
+		
+<form id="register-form">
+<h1 style="padding-bottom:50px;"> Sign up</h1>
+<label class="form-control-label" >Your Name in Arabic</label>
+<input class="form-control " type="text" name="name_ar" placeholder="أحمد" pattern="^[\u0621-\u064A ]+$" title="your name must be in Arabic character only" autocomplete="on" autofocus >
 
-			    			<div class="form-group">
-			    				<input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
-			    			</div>
 
-			    			<div class="row">
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-			    					</div>
-			    				</div>
-			    				<div class="col-xs-6 col-sm-6 col-md-6">
-			    					<div class="form-group">
-			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
-			    					</div>
-			    				</div>
-			    			</div>
-			    			
-			    			<input type="submit" value="Register" class="btn btn-info btn-block">
-			    		
-			    		</form>
-			    	</div>
-	    		</div>
-            </div>
 
-    </div>
-        </div>
-        
+<label>Your Name in English</label>
+<input type="text"class="form-control" name="name_en" placeholder="ahmed" pattern="^[a-zA-Z ]+$" title="your name must be in English character only" autocomplete="on" >
+
+<label>Your Email</label>
+<input type="text" class="form-control"name="email" placeholder="name@domain-name.com" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="your email must be like that name@domain-name.com" autocomplete="on" >
+
+
+
+<label>Your Address</label>
+<input type="text" class="form-control"name="address" placeholder="Country, State, City, Street" pattern="^([\u0621-\u064A0-9\-, ]{3,})|([a-zA-Z0-9\-, ]{3,})+$" title="your address must be in English or Arabic characters only and at least 3 characters" autocomplete="on" >
+
+
+
+<label>Your Phone</label>
+<input type="text" class="form-control"name="phone" placeholder="+201..." pattern="^\+?\d{10,}$" title="your phone must be at least 10 digits" autocomplete="on" >
+
+
+
+<label>Your Password</label>
+<input type="password" class="form-control"name="password" placeholder="at least 8 characters" pattern="^.{8,}$" title="your password must be 8 caharacters at least" autocomplete="on" >
+
+
+
+<label>Confirm Password</label>
+<input type="password" class="form-control"name="confirm-password" placeholder="the same as password" pattern="^.{8,}$" title="confirm password must match the password" autocomplete="on" >
+
+
+<div class="form-group">
+<input type="checkbox" name="agree"title="you should agree all terms" >
+<a href="#"> I agree all terms </a>
+
+
+
+<input type="submit" class="btn bg-primary"value="Register" title="Can't Register" data-content="you should match all validation first">
+</div>
+</form>
+	
 
                
         <!-- Footer -->

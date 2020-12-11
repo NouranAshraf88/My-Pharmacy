@@ -20,7 +20,7 @@
     </head>
     <body>
 		<!-- topbar -->
-       <div class="top-bar">
+       <div class="top-bar ">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
@@ -35,46 +35,9 @@
             </div>
         </div>
 
-        <!-- navbar -->
-                    <div class="nav">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
-                    <a href="#" class="navbar-brand">MENU</a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse justify-content-between sticky-top" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="#products" class="nav-item nav-link">Products</a>
-                            <a href="#recent-products" class="nav-item nav-link">Checkout</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-                                <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Wishlist</a>
-                                    <a href="register.html" class="dropdown-item">Register</a>
-                                    <a href="log%20in.html" class="dropdown-item">Log in</a>
-
-                                    <a href="#social-links" class="dropdown-item">Contact Us</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="navbar-nav ml-auto">
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-                                <div class="dropdown-menu">
-                                    <a href="log%20in.html" class="dropdown-item">Login</a>
-                                    <a href="register.html" class="dropdown-item">Register</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        
         <!-- search-->
-            <div class="bottom-bar">
+            <div class="bottom-bar sticky-top">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-md-3">
@@ -106,32 +69,95 @@
             </div>
         </div>
 
-    <div class="wrapper d-flex align-items-stretch ">
-<nav id="sidebar" class="active bg-light">
-<ul class="list-unstyled components  ">
-<li>
-<a id="sidebarCollapse" href="#"><i class="fa fa-bars"></i> </a>
-</li>
+		<!-- navbar -->
+                    <div class="nav sticky-tops">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark ">
+                    <a href="#" class="navbar-brand  sticky-top">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-<li>
-<a href="#recent-products"><i class="fa fa-user"></i> What's New</a>
-</li>
-<li>
-<a href="#products"><i class="fa fa-sticky-note"></i> Products</a>
-</li>
-<li>
-<a href="#h-title"><i class="fa fa-user"></i> About us</a>
-</li>
-    <li>
-<a href="#social-links"><i class="fa fa-user"></i> contact</a>
-</li>
-</ul>
+                    <div class="collapse navbar-collapse justify-content-between " id="navbarCollapse">
+                        <div class="navbar-nav mr-auto  sticky-top">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="#products" class="nav-item nav-link">Products</a>
+                            <a href="#recent-products" class="nav-item nav-link">Checkout</a>
+							<a href="#" class="nav-item nav-link">Cart</a>
 
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Wishlist</a>
+                                    <a href="register.html" class="dropdown-item">Register</a>
+                                    <a href="log%20in.html" class="dropdown-item">Log in</a>
+                                    <a href="#social-links" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="log%20in.html" class="dropdown-item">Login</a>
+                                    <a href="register.html" class="dropdown-item">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+ 
 
+    <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="active">
+				<ul class="list-unstyled components ">
+					<li>
+						<a id="sidebarCollapse" href="#"><i class="fa fa-bars"></i> Toggle</a>
+					</li>
+					<li class="active">
+						<a href="#"><i class="fa fa-home"></i> Brands</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-user"></i> Categories</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-sticky-note"></i> Products</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-cogs"></i> Users</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-paper-plane"></i> Orders</a>
+					</li>
+				</ul>
 
-</nav>
+			</nav>
+
+			<!-- Page Content  -->
+			<div  class="p-4 p-md-5 container-fluid">
+<div class="grid-container">
+
+    <div style="color:cadetblue;font-size:30px;text-shadow:1px 1px black" class="grid-child text-center">
+        <a style="color:cadetblue;"href="#">Users</a>
+    </div>
+
+    <div style="color:cadetblue;font-size:30px;text-shadow:1px 1px black" class="grid-child text-center">
+        <a style="color:cadetblue;"href="#">Order</a>
+    </div>
+  <div style="color:cadetblue;font-size:30px;text-shadow:1px 1px black" class="grid-child text-center">
+        <a style="color:cadetblue;"href="#">Favourites</a>
+    </div>
+
+    <div style="color:cadetblue;font-size:30px;text-shadow:1px 1px black" class="grid-child text-center">
+        <a style="color:cadetblue;"href="#">Cart</a>
+    </div>
+</div>
+		</div>
 		</div>
 	
+		
 		        <!-- Footer -->
         <div class="footer">
             <div class="container-fluid">

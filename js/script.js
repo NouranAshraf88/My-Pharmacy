@@ -5,6 +5,13 @@ $('#sidebar').toggleClass('active');
 });
 })(jQuery);
 
+    $('.header-slider').slick({
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
     
     // Product Slider 4 Column
     $('.product-slider-4').slick({
