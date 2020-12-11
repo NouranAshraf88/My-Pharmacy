@@ -47,75 +47,93 @@ $('#sidebar').toggleClass('active');
             },
         ]
     });
+
     
  ///**validation**/
-(function ($) {
-    'use strict';
-   
-    try {
-        $('.js-datepicker').daterangepicker({
-            "singleDatePicker": true,
-            "showDropdowns": true,
-            "autoUpdateInput": false,
-            locale: {
-                format: 'DD/MM/YYYY'
-            },
-        });
-    
-        var myCalendar = $('.js-datepicker');
-        var isClick = 0;
-    
-        $(window).on('click',function(){
-            isClick = 0;
-        });
-    
-        $(myCalendar).on('apply.daterangepicker',function(ev, picker){
-            isClick = 0;
-            $(this).val(picker.startDate.format('DD/MM/YYYY'));
-    
-        });
-    
-        $('.js-btn-calendar').on('click',function(e){
-            e.stopPropagation();
-    
-            if(isClick === 1) isClick = 0;
-            else if(isClick === 0) isClick = 1;
-    
-            if (isClick === 1) {
-                myCalendar.focus();
-            }
-        });
-    
-        $(myCalendar).on('click',function(e){
-            e.stopPropagation();
-            isClick = 1;
-        });
-    
-        $('.daterangepicker').on('click',function(e){
-            e.stopPropagation();
-        });
-    
-    
-    } catch(er) {console.log(er);}
+$("#register-form input:not([type='submit'])").on("focus",function(){
+$(this).css("border","2px solid cyan");
+});
 
-    try {
-        var selectSimple = $('.js-select-simple');
+$("#register-form input:not([type='submit'])").on("blur",function(){toValidate($(this))});
+
+$("#register-form").on("submit",function(){
+let inputs = $(this).children().children("input:not([type='submit'])");
+let inputs = $(this).find("input:not([type='submit'])");
+toValidate(inputs);
+
+});
+
+function toValidate(el)
+{
+console.log(el);
+if(!validate(el))
+{
+el.css("border","2px solid red");
+el.tooltip('show');
+}
+else
+{
+el.css("border","2px solid green");
+el.tooltip('hide');
+}
+}
+
+
+function validate(el)
+{
+console.log(el.attr("name"));
+if(el.attr("name") == "name_ar")
+{
+if(el.val().trim().match(/^[\u0621-\u064A ]+$/) == null)//only arabic letters
+return false;
+}
+else if(el.attr("name") == "name_en")
+{
+if(el.val().trim().match(/^[a-zA-Z ]+$/) == null)
+return false;
+}
+else if(el.attr("name") == "email")
+{
+if(el.val().trim().match(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/) == null)
+return false;
+}
+else if(el.attr("name") == "address")
+{
+if(el.val().trim().match(/^([\u0621-\u064A0-9\-, ]{3,})|([a-zA-Z0-9\-, ]{3,})+$/) == null)
+return false;
+}
+else if(el.attr("name") == "phone")
+{
+if(el.val().trim().match(/^\+?\d{10,}$/) == null)
+return false;
+}
+else if(el.attr("name") == "password")
+{
+if(el.val().trim().length < 8 )
+return false;
+}
+else if(el.attr("name") == "confirm-password")
+{
+if(el.val().trim().length < 8 && el.val().trim() != $("#register-form input[name='password']"))
+return false;
+}
+else if(el.attr("name") == "agree")
+{
+if(!el.attr("checked"))
+return false;
+}
+else if(el.has("required").val() == "")
+{
+return false;
+}
+return true;
+
     
-        selectSimple.each(function () {
-            var that = $(this);
-            var selectBox = that.find('select');
-            var selectDropdown = that.find('.select-dropdown');
-            selectBox.select2({
-                dropdownParent: selectDropdown
-            });
-        });
+   })(jQuery); 
     
-    } catch (err) {
-        console.log(err);
-    }
     
 
-})(jQuery);
+
     
     
     
